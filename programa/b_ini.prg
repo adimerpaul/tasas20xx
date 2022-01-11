@@ -1,0 +1,20 @@
+PUBLIC maxgest
+CLOSE all
+SELECT 1
+USE z:\simat\maestro\pm01inmu
+GO TOP
+BROWSE FOR CANTIDAD='71734801' AND BANDERA='1'
+	IF VAL(bandera)=1
+		G=GESTION
+		DO b_gest WITH cantidad
+		WAIT WINDOW maxgest nowait
+		SELECT 1
+		IF GESTION<VAL(MAXGEST)
+			WAIT WINDOW MAXGEST+' '+CANTIDAD+STR(GESTION) nowait
+			REPLACE gestion WITH VAL(maxgest)
+		ELSE
+		ENDIF
+		BROW
+	ELSE
+	ENDIF
+CLOSE ALL

@@ -1,0 +1,31 @@
+LPARAMETERS ORIGEN,destino
+IF  empty(destino)
+	DESTINO = "\Aron-9\Aron-9.exe"
+endif
+SET TALK OFF
+SET CONSOLE OFF
+_SCREEN.WINDOWSTATE = 2
+_SCREEN.BACKCOLOR = 16744448
+SET STATUS BAR OFF
+SET SYSMENU OFF
+_SCREEN.CAPTION = "Sistema de actualización de recursos"
+IF EMPTY(ORIGEN)
+	WAIT WINDOW TIMEOUT 5 "Existe un error de parámetros. Consulte con el administrador del sistema"
+	QUIT
+	ENDIF
+	LOCAL EXERESPALDO
+	WAIT WINDOW NOWAIT "Actualizando la versión del sistema. Por favor aguarde..."
+	INKEY(2)
+	EXERESPALDO = "dixis.old"
+	IF FILE(EXERESPALDO)
+		DELETE FILE "&exeRespaldo"
+	ENDIF
+	RENAME "&destino" TO "&exeRespaldo"
+	COPY FILE "&origen" TO "&destino"
+	WAIT CLEAR
+	MESSAGEBOX("El sistema se ha actualizado correctamente", 48, "Fin de actualización")
+	RUN /N "&destino"
+	QUIT
+ENDIF 	
+ENDPROC
+

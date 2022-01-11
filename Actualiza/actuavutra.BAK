@@ -1,0 +1,55 @@
+*****
+set talk off
+clear
+close all
+clear all
+set sysmenu off
+Set Multilocks ON
+Set confir ON
+Set Exclusive OFF
+set safety off
+set century ON
+SET DATE YMD
+SET LOCK ON
+SET REFRESH TO 5
+set century on
+SET REPROCES TO AUTOMATIC
+Set exclusive OFF
+Close database
+CLOSE tables
+*****
+set talk off
+SET CONSOLE OFF 
+close all
+clear all
+SET SYSMENU OFF
+SET SAFETY OFF
+Application.Visible=.F.
+SERVERNAME='SERVIDOR'
+*MESSAGEBOX("Hasta aca renombra el aron antiguo")
+WAIT "LA ACTUALIZACION EMPEZARA DE UNOS 5 SEGUNDOS . . . . " WINDOW AT 20,45 TIMEOUT 5
+RENAME "\VUTR@T20XX\programa\vutr2020.exe" TO "\VUTR@T20XX\programa\vutr2020-old.exe"
+*COPY FILE  \\ADSRV01\Aron-9\Aron-9.exe to \Aron-9\Aron-9.exe
+*COPY FILE  \\server2\Versions\Aron-9.exe to \Aron-9\Aron-9.exe
+*COPY FILE  \\192.168.1.155\Aron-9\Aron-9.exe to \Aron-9\Aron-9.exe
+*COPY FILE  \\SERVIDOR\Aron-9\Aron-9.exe to \Aron-9\Aron-9.exe
+*COPY FILE  \\TANGOSERVER\Aron-9\Aron-9.exe to \Aron-9\Aron-9.exe
+*COPY FILE  \\&SERVERNAME\Aron-9\Aron-9.exe to \Aron-9\Aron-9.exe
+*COPY FILE  \\server2\Aron-9\Aron-9.exe to \Aron-9\Aron-9.exe
+*COPY FILE  \\caja1\Aron-9\Aron-9.exe to \Aron-9\Aron-9.exe
+*COPY FILE  \\SERVER_VIP\Aron-9\Aron-9.exe to \Aron-9\Aron-9.exe
+COPY FILE  \\SERVERNAME\VUTR@T20XX\programa\vutr2020.exe to \VUTR@T20XX\programa\vutr2020.exe
+
+DECLARE INTEGER FindWindow IN WIN32API ; 
+STRING cNULL, ; 
+STRING cWinName 
+DECLARE SetForegroundWindow IN WIN32API ; 
+INTEGER nHandle 
+
+nHWD = FindWindow(0, _screen.caption)
+SetForegroundWindow(nHWD)
+
+MESSAGEBOX("El sistema se ha actualizado correctamente", 48, "Fin de actualización")
+RUN /N "\VUTR@T20XX\programa\vutr2020.exe"
+QUIT 
+ON SHUTDOWN

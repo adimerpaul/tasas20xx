@@ -1,0 +1,22 @@
+Servicio aguan potable y alcantarillado
+                "EPSA ORINOCA"
+          RICIBO: %NroAut%
+CONSUMO:                
+Nro Pileta:                                                     
+Socio  :                           
+Direccion :                                                                                                                                                       
+Lect Anteiro= 0
+Lect. Actual= 0
+Consumo= 0
+Mnatenimiento= 0
+Deudas:
+Importe a Pagar: 0
+Que carajo pasa
+
+
+
+
+
+
+
+..

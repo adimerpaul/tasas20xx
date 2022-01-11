@@ -1,0 +1,22 @@
+HOTEL OPORTO 
+Nro Mesa: 1   
+Fecha Venta: 14/10/27  
+Cajero  : IVAN RAUL MENACHO MIRANDA    
+Comanda : 2857
+Atencion:                              
+IVAN RAUL MENACHO MIRANDA   
+=======================================
+CANT   NOMBRE                   MONTO                    
+2     COMBO ESCOLAR              46.00
+=======================================
+Total Ventas:                    46.00
+
+
+
+
+SALDRAAAA :      0.00
+                            
+
+
+
+..
